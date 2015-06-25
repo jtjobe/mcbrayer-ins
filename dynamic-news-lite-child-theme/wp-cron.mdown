@@ -1,0 +1,24 @@
+READ-ME
+=======
+
+Child theme created for McBrayer Insurance Agency by J.T. Jobe
+
+-----
+
+Suggested Reading (for the McBrayer Insurance Agency)
+=====
+
+MailChimp on their email service for your newsletter
+-
+
+
+
+Important!
+==========
+
+Things To Do
+-Go ahead and make header and footer responsive
+-Make a GIT repository so Daniel can access all code
+
+-Clear documentation on all hard-coded aspects
+-How to include images with post previews

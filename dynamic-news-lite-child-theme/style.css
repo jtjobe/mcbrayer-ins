@@ -1,0 +1,197 @@
+/*
+Theme Name: McBrayer Insurance Agency Theme
+THEME URI: http://yourthemessite.com
+Description: A modified theme for the McBrayer Insurance Agency based off the Dynamic News Lite theme
+Author: JT Jobe
+Template: dynamic-news-lite
+.
+*/
+
+@import url('../dynamic-news-lite/style.css');
+
+/* Utility Classes */
+/*-----------------------------------------------------*/
+
+
+*, p {
+  font-family: 'Open Sans';
+}
+
+#wrapper {
+  background-color: #fff;
+}
+
+.page-title, .title {
+  font-family: 'Oswald';
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+a, a:link {
+  color: #333333;
+}
+
+/* Header */
+/*-----------------------------------------------------*/
+
+
+#navi-wrap {
+  background: #145E88;
+}
+
+#mainnav-menu a {
+  text-transform: none;
+  font-family: 'Oswald';
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+#social-icons-menu li a {
+  background: #145E88;
+}
+
+.header-content-container {
+  display: block;
+  margin-top: 30px;
+}
+
+#header {
+  padding: 1em 0.5em;
+}
+
+#header-wrap {
+  height: 150px;
+}
+
+#header-content div {
+  float: none;
+}
+
+.header-search-bar {
+  display: inline-block;
+  padding-left: 23em;
+}
+
+.header-social-icons {
+  display: inline-block;
+}
+
+#social-icons-menu li a {
+  border-radius: 2px;
+}
+
+/* Sidebar */
+/*-----------------------------------------------------*/
+
+
+.click-for-10-button {
+  padding: 1em;
+  background-color: #44AB44;
+  text-align: center;
+  color: white;
+  border-radius: 2px;
+  font-family: 'Oswald';
+  border: 1px solid #d3d3d3;
+  margin-bottom: 1em;
+}
+
+.widget-box {
+  border: 1px solid #d3d3d3;
+  border-radius: 2px;
+}
+
+.widget-title {
+  background-color: #145E88;
+  font-family: 'Oswald';
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.widget-contents {
+  padding-top: 0.8em;
+}
+
+.recent-items {
+  padding: 0.8em;
+  text-align: center;
+}
+
+li.recent-items a {
+  color: #333333;
+}
+
+/* Footer */
+/*-----------------------------------------------------*/
+
+
+div#footer-wrap, footer#footer {
+  background-color: #145E88;
+}
+
+.footer-col {
+  display: inline-block;
+  width: 18%;
+  color: #fff;
+  padding: 1.5em;
+}
+
+.footer-title {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.footer-col-section {
+  padding: 1em 0;
+}
+
+.footer-col-section p {
+  line-height: 1.2em;
+}
+
+.contact-col {
+  background-color: #3b7697;
+  border-radius: 2px;
+}
+
+.contact-col-button {
+  background-color: #6b97b0;
+  padding: 0.5em;
+  margin-top: 0.3em;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.footer-social-icons {
+  background-color: #fff;
+}
+
+/* Pages */
+/*-----------------------------------------------------*/
+
+.page-title {
+  letter-spacing: -0.04em;
+  font-family: 'Merriweather';
+  font-size: 1.7em;
+  border-bottom: none;
+}
+
+.type-post, .type-page, .type-attachment {
+  border: none;
+  box-shadow: none;
+}
+
+/* Media Queries Below */
+
+@media only screen and (min-width: 60em) {
+
+header#header {
+  padding: 1em 0.5em;
+}
+
+div#wrapper {
+  background-color: #fff;
+}
+
+}
