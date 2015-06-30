@@ -65,6 +65,7 @@ a, a:link {
 
 #header-content div {
   float: none;
+  margin-left: 0;
 }
 
 .header-search-bar {
@@ -125,11 +126,12 @@ li.recent-items a {
 /* Footer */
 /*-----------------------------------------------------*/
 
-
+/* Sets the background color of the footer */
 div#footer-wrap, footer#footer {
   background-color: #145E88;
 }
 
+/* These columns are the basic building blocks of the footer, there are four across */
 .footer-col {
   display: inline-block;
   width: 18%;
@@ -138,23 +140,41 @@ div#footer-wrap, footer#footer {
 }
 
 .footer-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 300;
 }
 
-.footer-col-section {
-  padding: 1em 0;
+.footer-col-row {
+  padding: 0.5em 0;
 }
 
 .footer-col-section p {
   line-height: 1.2em;
 }
 
+/* Until the next comment, all styling is for the footer menu links in the first 2 columns */
+
+p.footer-title.title.menu-title {
+  padding: 1em 0 0.2em;
+}
+
+p.footer-text {
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+p.small-email-text {
+  font-size: 0.8em;
+}
+
+
+/* Sets the color of the highlighted Contact Us box */
 .contact-col {
   background-color: #3b7697;
   border-radius: 2px;
 }
 
+/* Styles the 'Get Directions' and 'Call Now' button */
 .contact-col-button {
   background-color: #6b97b0;
   padding: 0.5em;
@@ -163,8 +183,19 @@ div#footer-wrap, footer#footer {
   border-radius: 2px;
 }
 
-.footer-social-icons {
-  background-color: #fff;
+/* Controls the colors of the footer Social Media icons */
+.footer-social-icons #social-icons-menu li a {
+  background-color: #8697A1;
+}
+
+/* Controls the positioning of the footer Social Media icons */
+.footer-social-icons #social-icons-menu li {
+  padding-bottom: 1em;
+}
+
+/* This controls the positioning of the footer Logo */
+.footer-logo {
+  padding: 1em 0 7em;
 }
 
 /* Pages */
