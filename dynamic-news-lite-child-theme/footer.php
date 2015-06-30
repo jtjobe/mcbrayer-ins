@@ -23,7 +23,7 @@
       <div class="footer-col">
         <p class="footer-title title menu-title">Community Support<p>
           <p class="footer-text">Our Community Causes</p>
-          <p class="footer-text">Suggest A Cause</p>
+          <p class="footer-text">Nominate A Cause</p>
         <p class="footer-title title menu-title">About Us<p>
           <p class="footer-text">David McBrayer</p>
           <p class="footer-text">Adam McBrayer</p>
@@ -48,10 +48,14 @@
           <p class="footer-text">Alabaster, AL 35007</p>
         </div>
         <div class="contact-col-button">
-          <a href="https://www.google.com/maps/dir/Current+Location/122+1st+St+S,+Alabaster,+AL+35007" target='_blank'><p>Get Directions</p></a>
+          <a href="https://www.google.com/maps/dir/Current+Location/122+1st+St+S,+Alabaster,+AL+35007" target='_blank' class="contact-button-link">
+            <span class="contact-button-link">Get Directions</span>
+          </a>
         </div>
         <div class="contact-col-button">
-          <a href="tel:+2053040414">Call Now</a>
+          <a href="tel:+2053040414">
+            <span class="contact-button-link">Call Now</span>
+          </a>
         </div>
       </div>
 
