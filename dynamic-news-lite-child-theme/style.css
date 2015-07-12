@@ -9,8 +9,9 @@ Template: dynamic-news-lite
 
 @import url('../dynamic-news-lite/style.css');
 
-/* Utility Classes */
-/*-----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*                                   UTILITY CLASSES                                       */
+/*-----------------------------------------------------------------------------------------*/
 
 *, p {
   font-family: 'Open Sans';
@@ -30,8 +31,41 @@ a, a:link {
   color: #333333;
 }
 
-/* Header */
-/*-----------------------------------------------------*/
+h3 {
+  padding-bottom: 1em;
+}
+
+h4, h5 {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+/* Eliminates extra white space at top on pages without pictures */
+h2.page-title.title-no-pic {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Hides the spinning arrows that don't disappear like they should on form submission */
+img.ajax-loader {
+  display: none;
+}
+
+/* Clearing Floats */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+    *zoom: 1; /* For IE 6/7 only */
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*                                   HEADER                                                */
+/*-----------------------------------------------------------------------------------------*/
 
 #navi-wrap {
   background: #145E88;
@@ -49,7 +83,7 @@ a, a:link {
 }
 
 .header-content-container {
-  display: block;
+  display: inline-block;
   margin-top: 30px;
 }
 
@@ -58,17 +92,23 @@ a, a:link {
 }
 
 #header-wrap {
-  height: 150px;
+  height: 165px;
+}
+
+div#logo {
+  display: inline-block;
+}
+
+img.main-logo {
+  width: 400px;
 }
 
 #header-content div {
-  float: none;
   margin-left: 0;
 }
 
 .header-search-bar {
   display: inline-block;
-  padding-left: 23em;
 }
 
 .header-social-icons {
@@ -79,23 +119,38 @@ a, a:link {
   border-radius: 2px;
 }
 
-/* Sidebar */
-/*-----------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------*/
+/*                                   SIDEBAR                                               */
+/*-----------------------------------------------------------------------------------------*/
+
+
+/* Click for $10 button styling */
 .click-for-10-button {
-  padding: 1em;
   background-color: #44AB44;
   text-align: center;
   color: white;
   border-radius: 2px;
   font-family: 'Oswald';
-  border: 1px solid #d3d3d3;
-  margin-bottom: 1em;
+  border: 1px solid #000;
+  height: 72px;
+  font-size: 1.5em;
 }
+
+div.click-for-10-button p.title {
+  padding: 0.7em;
+}
+
+a.click-for-10-link-div {
+  text-decoration: none;
+}
+
+/* Widget box styling for 'Recent News' and 'Get A Quote' */
 
 .widget-box {
   border: 1px solid #d3d3d3;
   border-radius: 2px;
+  margin-top: 2em;
 }
 
 .widget-title {
@@ -109,6 +164,7 @@ a, a:link {
 
 .widget-contents {
   padding-top: 0.8em;
+  background-color: #efefef;
 }
 
 .recent-items {
@@ -120,8 +176,92 @@ li.recent-items a {
   color: #333333;
 }
 
-/* Footer */
-/*-----------------------------------------------------*/
+/* Styling for Get Quote form in sidebar */
+/*=======================================*/
+
+.sidebar-get-quote-input {
+  width: 14.1em;
+  margin-left: 1em;
+}
+
+.get-quote-sidebar-form-row {
+  padding-bottom: 1em;
+}
+
+input.wpcf7-form-control.wpcf7-submit.get-quote-sidebar-form-submit {
+  width: 15.5em;
+  background-color: #145e88;
+  color: #fff;
+}
+
+.widget-box.get-quote-widget {
+  height: 36em;
+}
+
+/* Ensures there is some space between bottom of widget and footer on pages with little content */
+.widget-box.get-quote-widget-box {
+  margin-bottom: 2em;
+}
+
+/* Styles the select dropdown for Policy Type */
+select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required.policies-dropdown {
+  width: 28em;
+  border: 1px solid #dddddd;
+  height: 3em;
+  background-color: white;
+}
+
+select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required.policies-dropdown.sidebar-get-quote-input {
+  margin-left: 1em;
+  width: 15.5em;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*                                   FOOTER                                                */
+/*-----------------------------------------------------------------------------------------*/
+
+
+/* Styling for the simple email sign up form */
+/*===========================================*/
+
+  /* Background color for simple email sign up form container */
+.simple-email-form-container {
+  background-color: #e5e5e5;
+}
+
+  /* Width of the email input field */
+input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
+  width: 20em;
+}
+
+  /* Width of the 'Sign Up' button */
+input.wpcf7-form-control.wpcf7-submit.simple-email-form-submit {
+  width: 7em;
+  font-weight: 600;
+  border: 1px solid #145e88;
+}
+
+  /* Width of entire form area - has to be fixed for centering with margin:auto */
+.simple-email-form-content {
+  margin: auto;
+  width: 32em;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+  background-color: #e5e5e5;
+  margin-left: 1.1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: #145e88;
+  border-radius: 2px;
+}
+
+
+/* Footer container div */
+
+.footer-container {
+  margin: auto;
+}
 
 /* Sets the background color of the footer */
 div#footer-wrap, footer#footer {
@@ -131,7 +271,7 @@ div#footer-wrap, footer#footer {
 /* These columns are the basic building blocks of the footer, there are four across */
 .footer-col {
   display: inline-block;
-  width: 18%;
+  width: 19%;
   color: #fff;
   padding: 1.5em;
   vertical-align: top;
@@ -153,11 +293,18 @@ div#footer-wrap, footer#footer {
 /* Styling is for the footer menu links in the first 2 columns */
 p.footer-title.title.menu-title {
   padding: 1em 0 0.2em;
+  color: white;
 }
 
 p.footer-text {
   font-weight: 100;
   line-height: 1.5em;
+  color: white;
+}
+
+/* Turns off underline on hover for footer links */
+.footer-col a:hover {
+  text-decoration: none;
 }
 
 /* Smaller font-size so long email address fits on one line */
@@ -167,23 +314,29 @@ p.small-email-text {
 
 /* Sets the color of the highlighted Contact Us box + positioning */
 .contact-col {
-  background-color: #3b7697;
+  background-color: #186D9B;
   border-radius: 2px;
   margin-top: 2em;
 }
 
 /* Styles the 'Get Directions' and 'Call Now' button */
 .contact-col-button {
-  background-color: #85B0C9;
+  background-color: #F5F5F5;
   padding: 0.5em;
   margin-top: 0.3em;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4px;
+  height: 1.6em;
 }
 
-/* Sets font color for buttons */
-span.contact-button-link {
-  color: white;
+/* Sets font color for'Get Directions' and 'Call Now' buttons */
+.contact-button-link {
+  color: #145e88;
+  font-weight: 600;
+  padding-top: 0.3em;
+}
+
+.footer-col.far-right-footer-col {
 }
 
 /* Controls the colors of the footer Social Media icons */
@@ -198,11 +351,14 @@ span.contact-button-link {
 
 /* This controls the positioning of the footer Logo */
 .footer-logo {
-  padding: 1em 0 7em;
+  padding: 1em 0 11em;
+  width: 200px;
 }
 
-/* Pages */
-/*-----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*                               MAIN PAGE CONTENT                                         */
+/*-----------------------------------------------------------------------------------------*/
+
 
 .page-title {
   letter-spacing: -0.04em;
@@ -216,16 +372,593 @@ span.contact-button-link {
   box-shadow: none;
 }
 
-/* Media Queries Below */
+.page-header-image {
+  height: 20em;
+}
 
+img.page-header-image {
+  width: 100%;
+  height: 100%;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*                                       HOME PAGE                                         */
+/*-----------------------------------------------------------------------------------------*/
+
+
+/* Styles 'Read More' button under sections */
+.read-more {
+  padding: 0.5em 1em;
+  width: 5em;
+  text-align: center;
+  background-color: #bdbdbd;
+  border-radius: 2px;
+  margin-bottom: 3em;
+}
+
+.read-more a, .read-more a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*                                    REWARDS PAGE                                         */
+/*-----------------------------------------------------------------------------------------*/
+
+/* Styles 'Send Referrals' submit button */
+input.wpcf7-form-control.wpcf7-submit.referral-submit {
+  width: 22em;
+  margin-left: 0;
+  background-color: #44ab44;
+  color: white;
+  border: none;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*                                    BLOG HOME PAGE                                       */
+/*-----------------------------------------------------------------------------------------*/
+
+/* Makes Submit button wider */
+input.wpcf7-form-control.wpcf7-submit.blog-page-email-sign-up {
+  width: 15em;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*                             NOMINATE A CAUSE PAGE                                       */
+/*-----------------------------------------------------------------------------------------*/
+/* Styles 'Nominate A Cause' submit button */
+input.wpcf7-form-control.wpcf7-submit.nominate-cause-submit {
+  width: 22em;
+  margin-left: 0;
+  background-color: #44ab44;
+  color: white;
+  border: none;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*                                GET A QUOTE PAGE                                         */
+/*-----------------------------------------------------------------------------------------*/
+
+/* Styles 'Policy Type' dropdown for this page (needs to be wider that one in sidebar) */
+select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required.policies-dropdown.main-get-quote-form {
+  width: 22.2em;
+}
+
+.get-quote-policy-select select {
+  font-size: 1em;
+  padding: 0;
+  color: #a9a9a9;
+}
+
+/* Styles 'Get Quote' submit button */
+input.wpcf7-form-control.wpcf7-submit.main-get-quote-form {
+  width: 22.2em;
+  margin-left: 0;
+  background-color: #44ab44;
+  color: white;
+}
+
+/* Style for Successful submission notification */
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+  border: none;
+  width: 20em;
+  margin: 0;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*                             PARENT THEME MEDIA QUERIES                                  */
+/*-----------------------------------------------------------------------------------------*/
+
+
+/* Small screens | <1120px */
+@media only screen and (max-width: 70em) {
+  #wrapper {
+    width: 94%;
+  }
+}
+/* Smaller screens | <1120px */
+@media only screen and (max-width: 65em) {
+  #wrapper {
+    width: 96%;
+  }
+  .widget, .type-post, .type-page, .type-attachment, #comments {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+  .widgettitle {
+    margin: 0 0 1.5em 0;
+  }
+}
+
+/* Tablets (landscape) | <960px */
+@media only screen and (max-width: 60em) {
+  #wrapper {
+    width: 100%;
+  }
+  #header {
+  }
+  #content {
+    width: 68%;
+    display: inline-block;
+  }
+  #sidebar {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+  }
+  #logo {
+    float: none;
+    width: 100%;
+  }
+  #header-content {
+    display: block;
+    padding-top: 1em;
+  }
+  #header-content div {
+    float: right;
+    margin-left: 0;
+    margin-right: 1em;
+    padding-top: 0.5em;
+  }
+  #header-content #header-text {
+    font-size: 1.3em;
+  }
+  #header-content #header-search #s {
+    max-width: 100%;
+    float: none;
+  }
+  .widget, .type-post, .type-page, .type-attachment, #comments {
+    box-shadow: 0 0 4px #ddd;
+    border: 1px solid #ddd;
+    padding: 1.5em;
+  }
+  .widgettitle {
+    margin: -0.5em -0.5em 1.5em -0.5em;
+  }
+  .type-post, .type-page, .type-attachment {
+    padding: 0.8em 1.5em 1.5em;
+  }
+  #comments {
+    padding: 1em 1.5em;
+  }
+
+
+  /* Mobile Navigation */
+
+  /* Reset */
+  #mainnav, #mainnav-menu, #mainnav-menu li, #mainnav-menu a, #mainnav-menu ul,
+  #mainnav-menu ul a, #mainnav-menu ul ul, #mainnav-menu li ul ul
+  {
+    margin: 0;
+    padding: 0;
+    position: static;
+    float: none;
+    display: inline;
+    font-size: 1.0em;
+    border: none;
+    box-shadow: none;
+    background: none;
+    top: 0;
+    left: 0;
+  }
+  #mainnav-menu li:hover ul ul, #mainnav-menu li:hover ul ul ul, #mainnav-menu li:hover ul ul ul ul,
+  #mainnav-menu li:hover ul, #mainnav-menu li li:hover ul, #mainnav-menu li li li:hover ul, #mainnav-menu li li li li:hover ul
+  {
+    display: inline;
+  }
+
+  #mainnav {
+    margin: 1.5em 0;
+    float: none;
+  }
+  #mainnav-toggle {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1.2em;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.0em;
+    font-family: 'Francois One', Tahoma, Arial;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+  }
+  #mainnav-toggle:hover {
+    cursor: pointer;
+    background: #e84747;
+  }
+  #mainnav-toggle:after {
+    float: right;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    content: '\f419';
+    font: normal 24px/1 Genericons;
+    text-decoration: inherit;
+    vertical-align: text-bottom;
+  }
+  #mainnav-menu {
+    width: 100%;
+    display: none;
+    border-top: 1px solid #fff;
+  }
+  #mainnav-menu a {
+    display: block;
+    padding: 1.5em;
+    text-decoration: none;
+    font-size: 1.0em;
+    border-bottom: 1px solid #fff;
+    clear: left;
+  }
+  #mainnav-menu ul {
+    float: left;
+    padding: 1em;
+    background: #fff;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #mainnav-menu ul a {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    font-size: 0.9em;
+    border-bottom: 1px solid #aaa;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #mainnav-menu ul li ul {
+    float: left;
+    padding: 0 0 0 1em;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #mainnav-menu li.current_page_item a, #mainnav-menu li.current-menu-item a {
+    text-decoration: underline;
+  }
+  #mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a{
+    text-decoration: none;
+  }
+  #mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
+    text-decoration: underline;
+  }
+  
+  #mainnav-menu .submenu-dropdown-toggle {
+    float: right;
+    display: block;
+    margin: 0;
+    padding: 1.1em 1.5em;
+  }
+  #mainnav-menu .submenu-dropdown-toggle:hover {
+    cursor: pointer;
+    background: #e84747;
+  }
+  #mainnav-menu .submenu-dropdown-toggle:before {
+    font-size: 28px;
+    line-height: 1;
+    font-family: 'Genericons';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: inherit;
+    vertical-align: middle;
+    content: '\f431';
+    color: #fff;
+  }
+  #mainnav-menu .submenu-dropdown-toggle.active:before {
+    content: '\f432';
+  }
+  #mainnav-menu ul .submenu-dropdown-toggle {
+    padding: 0.6em 1em;
+  }
+  #mainnav-menu ul .submenu-dropdown-toggle:before {
+    font-size: 24px;
+    color: #222;
+  }
+  #mainnav-menu ul .submenu-dropdown-toggle:hover:before {
+    color: #fff;
+  }
+}
+
+/* Tablets (portrait) | <800px */
+@media only screen and (max-width: 50em) {
+  #logo .site-title {
+    font-size: 2.3em;
+  }
+  .widget, .type-post, .type-page, .type-attachment, #comments {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+  .widgettitle {
+    margin: 0 0 1.5em 0;
+  }
+  .entry h1, .comment h1 {
+  font-size: 2.2em;
+  }
+  .entry h2, .comment h2 {
+    font-size: 1.8em;
+  }
+  .entry h3, .comment h3 {
+    font-size: 1.4em;
+  }
+  .entry tr th,
+  .entry thead th {
+    padding: 0.2em 0.4em;
+  }
+  .entry tr td {
+    padding: 0.2em 0.4em;
+  }
+  
+  /* Mobile Footer Navigation */
+  #footer #footer-text {
+    margin-top: -1.05em;
+  }
+    
+  /* Reset */
+  #footernav, #footernav-menu, #footernav-menu li, #footernav-menu a, #footernav-menu ul {
+    margin: 0;
+    padding: 0;
+    position: static;
+    float: none;
+    display: inline;
+    font-size: 1.0em;
+    border: none;
+    box-shadow: none;
+    background: none;
+    top: 0;
+    left: 0;
+  }
+  #footernav {
+    float: none;
+  }
+  #footernav-icon {
+    display: block;
+    text-decoration: none;
+    font-size: 1.0em;
+    color: #fff;
+  }
+  #footernav-icon:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #footernav-icon:after {
+    margin: 0.05em 0 0 0;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    content: '\f419';
+    font: normal 16px/1 Genericons;
+    text-decoration: inherit;
+    vertical-align: text-bottom;
+  }
+  #footernav-icon:hover:after {
+    text-decoration: none;
+  }
+  #footernav-menu {
+    display: none;
+    width: 100%;
+    padding-bottom: 1em;
+  }
+  #footernav-menu li {
+    display: block;
+    padding: 0.8em 0.4em;
+  }
+  #footernav-menu a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  #footernav-menu a:hover {
+    text-decoration: underline;
+  }
+  
+}
+
+/* Phablets (portrait) | <640px */
+@media only screen and (max-width: 40em) {
+
+  #logo, #header-content {
+    text-align: left;
+  }
+  #header-content #header-search,
+  #header-content #header-text,
+  #header-content #header-social-icons {
+    margin: 0;
+    float: none;
+  }
+  #header-social-icons #social-icons-menu li {
+    float: none;
+    display: inline-block;
+    list-style: none;
+    margin: 1px -1.5px;
+  }
+  .page-title {
+    font-size: 2.0em;
+  }
+  .post-title {
+    font-size: 1.4em;
+  }
+  .widget-category-posts .big-post .post-title {
+    font-size: 1.0em;
+  }
+  .widget-category-posts .small-post .post-title {
+    font-size: 0.9em;
+  }
+
+  /* Frontpage Categories */
+  .widget-category-posts .type-post {
+    margin: 0 0 1.5em 0;
+  }
+  #widget-category-posts-grid .category-posts-grid-row {
+    margin-right: 0;
+  }
+  #widget-category-posts-grid .category-posts-grid-row .big-post,
+  #widget-category-posts-grid .category-posts-grid-row .small-post-wrap,
+  #widget-category-posts-boxed .big-post,
+  #widget-category-posts-columns .category-posts-column-left {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  #widget-category-posts-boxed .small-posts,
+  #widget-category-posts-columns .category-posts-column-right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #widget-category-posts-boxed .small-posts,
+  #widget-category-posts-columns .category-posts-columns .small-posts {
+    padding-bottom: 0.5em;
+  }
+  #widget-category-posts-columns .category-posts-columns .small-post {
+    margin: 0 0 1em;
+  }
+  #widget-category-posts-columns .category-posts-column-right {
+    margin-top: 1.5em;
+  }
+}
+
+
+/* Smartphones | <480px */
+@media only screen and (max-width: 30em) {
+  #logo .site-title {
+    font-size: 2.0em;
+  }
+  .alignright, .alignleft {
+    float: none;
+    margin: 1em 0;
+  }
+  #footer #footer-text {
+    float: none;
+    margin-top: 1.05em;
+  }
+}
+
+
+
+
+
+
+
+/* Big Screens Navi Fix | >720px */
 @media only screen and (min-width: 60em) {
-
-header#header {
-  padding: 1em 0.5em;
+  /* ensure #nav is visible on desktop version */
+  #mainnav-menu {
+    display: block !important;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* ensure #footernav is visible on desktop version */
+  #footernav-menu {
+    display: block !important;
+  }
 }
 
-div#wrapper {
-  background-color: #fff;
-}
+/*-----------------------------------------------------------------------------------------*/
+/*                             CHILD THEME MEDIA QUERIES                                   */
+/*-----------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 100em) {
+
+  ul#mainnav-menu li {
+    font-size: 0.9em;
+  }
 
 }
+
+@media only screen and (max-width: 1000px) {
+  .header-social-icons.social-icons-wrap.clearfix {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-content-container {
+    margin-top: -6em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #logo, #header-content {
+    text-align: center;
+  }
+  .header-content-container {
+  display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header-social-icons.social-icons-wrap.clearfix {
+  padding-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .footer-col {
+    width: 30%;
+  }
+  .footer-container {
+  width: 80%;
+  }
+  .footer-col.stacked-cols-right {
+  margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .footer-col {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    }
+  .footer-col.stacked-cols-right {
+    margin: auto;
+   }
+  .footer-logo {
+    padding: 0;
+    padding-bottom: 1em;
+    width: 100%;
+    margin: auto;
+  }
+  .footer-col.first-footer-col {
+  padding-bottom: 0;
+  margin-bottom: -1em;
+  }
+}
+

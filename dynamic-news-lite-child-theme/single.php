@@ -1,24 +1,23 @@
- <?php get_header(); ?>
+<?php get_header(); ?>
 
   <div id="wrap" class="container clearfix">
     
     <section id="content" class="primary" role="main">
     
     <?php if (have_posts()) : while (have_posts()) : the_post();
-
-      get_template_part( 'content', 'page' );
+    
+      get_template_part( 'content', 'single' );
 
       endwhile;
-
-    endif; ?>
     
-    <!-- This disables comments site-wide -->
+    endif; ?>
+      
+    <!-- This disables comments site-wide for single page posts -->
     <?php //comments_template(); ?>
     
     </section>
     
     <?php get_sidebar(); ?>
-    
   </div>
   
 <?php get_footer(); ?>  
